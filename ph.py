@@ -39,3 +39,9 @@ def handle_message(message):
             # Menghapus video setelah dikirim
             os.remove(video_filename)
         else:
+            bot.reply_to(message, f"Gagal mengunduh video: {video_filename}")
+    else:
+        bot.reply_to(message, "Harap kirim link video YouTube yang valid.")
+
+# Menjalankan bot
+bot.polling()
